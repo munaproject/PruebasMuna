@@ -5,7 +5,7 @@ using UnityEngine;
 public class ControlTexto : MonoBehaviour
 {
     [SerializeField, TextArea(3, 10)] private string [] arrayTextos;
-    [SerializeField] private UIManager uIManagar;
+    [SerializeField] private UIManager uIManager;
     [SerializeField] private Movimiento personaje;
 
     private int indice;
@@ -13,7 +13,6 @@ public class ControlTexto : MonoBehaviour
     private void Awake()
     {
         personaje = GameObject.FindGameObjectWithTag("Player").GetComponent<Movimiento>();
-        uIManagar.ActivaDesactivaCajaTextos(false);
     }
 
     private void OnMouseDown()
@@ -21,18 +20,19 @@ public class ControlTexto : MonoBehaviour
         float distancia = Vector2.Distance(this.gameObject.transform.position, personaje.transform.position);
         if (distancia <=2)
         {
-            uIManagar.ActivaDesactivaCajaTextos(true);
+            uIManager.ActivaDesactivaCajaTextos(true);
             ActivaCartel();
         }
     }
 
     void ActivaCartel()
     {
-        uIManagar.MostrarTextos("hola");
         if (indice < arrayTextos.Length)
         {
-            uIManagar.MostrarTextos("hola");
+            uIManager.MostrarTextos(arrayTextos[indice]);
             indice++;
+        }else{
+            uIManager.ActivaDesactivaCajaTextos(false);
         }
     }
 }

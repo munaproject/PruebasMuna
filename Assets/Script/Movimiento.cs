@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class Movimiento : MonoBehaviour
 {
-    public float velocidad = 5;
+    [SerializeField] public float velocidad = 5;
 
-    Rigidbody2D rig;
-    Animator anim;
+    private Rigidbody2D rig;
+    private Animator anim;
+    private SpriteRenderer spriteLille;
+
 
     Vector2 move;
 
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         rig = GetComponent<Rigidbody2D>();
         rig.freezeRotation = true; //evita que el niño gire, se agradece
         anim = GetComponentInChildren<Animator>();
+        spriteLille = GetComponentInChildren<SpriteRenderer>();
     }
 
     // Update is called once per frame
