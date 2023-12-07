@@ -469,7 +469,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Este es un texto de prueba\nNueva linea\nOtra m\xE1s"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3978,8 +3978,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1948233290}
   m_HandleRect: {fileID: 1948233289}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.6588151
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4068,9 +4068,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrayTextos:
-  - 
-  - 
-  - 
+  - Este es un texto de prueba
+  - Nueva linea
+  - "Otra m\xE1s"
   uIManager: {fileID: 115091504}
   personaje: {fileID: 265357201}
 --- !u!61 &2114261531
