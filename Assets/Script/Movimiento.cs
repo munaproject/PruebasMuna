@@ -17,7 +17,7 @@ public class Movimiento : MonoBehaviour
     private void Awake()
     {
         rig = GetComponent<Rigidbody2D>();
-        rig.freezeRotation = true; //evita que el niño gire, se agradece
+        rig.freezeRotation = true; //evita que lille gire, se agradece
         anim = GetComponentInChildren<Animator>();
         spriteLille = GetComponentInChildren<SpriteRenderer>();
     }

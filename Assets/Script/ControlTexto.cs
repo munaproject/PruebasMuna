@@ -34,6 +34,7 @@ public class ControlTexto : MonoBehaviour
             indice++;
         }else{
             uIManager.ActivaDesactivaCajaTextos(false);
+            indice=0;
         }
     }
 }
