@@ -13,6 +13,7 @@ public class ControlTexto : MonoBehaviour
     private void Awake()
     {
         personaje = GameObject.FindGameObjectWithTag("Player").GetComponent<Movimiento>();
+        uIManager.ActivaDesactivaCajaTextos(false);
     }
 
     private void OnMouseDown()
